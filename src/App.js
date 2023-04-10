@@ -8,7 +8,8 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           ahmed 
-          
+          Mohamed hAni
+          elassal
         </p>
         <a
           className="App-link"
