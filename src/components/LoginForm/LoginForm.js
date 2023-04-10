@@ -1,7 +1,11 @@
-import { Box, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from '@mui/material';
+import { Box, Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import Logo from '../../assets/imgs/Applogicalogo.png';
+
+import styles from './LoginForm.module.css'
+import { green } from '@mui/material/colors';
 
 const LoginForm = () => {
 
@@ -25,21 +29,26 @@ const handleChange = (e) => {
 console.log(company);
 
   return (
-<Box
+    <div className={styles.login}>
+      <img src={Logo} alt="logo" />
+      
+    <Box
       component="form"
+      className={styles['login-form']}
       sx={{
-        '& > :not(style)': { m: 1, width: '25ch' },
+        '& > :not(style)': { m: 1 },
       }}
-      noValidate
       autoComplete="off"
     >
+      <h2 className={styles.title}>Login</h2>
       <TextField
         id="outlined-controlled"
         label="Email"
         name= "email"
+        fullWidth
         onChange={handleChange}
       />
-        <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
+        <FormControl sx={{ m: 1, }} variant="outlined" fullWidth>
           <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
@@ -61,7 +70,9 @@ console.log(company);
             label="Password"
           />
         </FormControl>
+        <Button variant="contained" fullWidth color='primary'>Sign in</Button>
     </Box>
+    </div>
   )
 }
 

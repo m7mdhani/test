@@ -1,0 +1,22 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #eee;
+}
+
+.login-form {
+    padding: 50px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+    margin-top: 30px;
+}
+.title {
+    font-size: 45px;
+    color: #f26651;
+    margin-bottom: 20px;
+}
