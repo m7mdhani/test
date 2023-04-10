@@ -38,18 +38,13 @@ console.log(company);
         label="Email"
         name= "email"
         onChange={handleChange}
-  
-      />
-      <TextField
-        id="outlined-controlled"
-        label="Password"
-        name='password'
-        onChange={handleChange}
       />
         <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
           <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
+            name='password'
+            onChange={handleChange}
             type={showPassword ? 'text' : 'password'}
             endAdornment={
               <InputAdornment position="end">
